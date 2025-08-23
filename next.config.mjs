@@ -11,9 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-   assetPrefix: '/portfolio/out',
-  basePath: '/portfolio/out',
-  trailingSlash: true,
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio',
 }
 
-export default nextConfig
+export default nextConfig;
