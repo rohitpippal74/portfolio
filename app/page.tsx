@@ -377,8 +377,8 @@ export default function Home() {
               viewport={{ once: true }}
             />
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Passionate freelance developer with 5+ years of experience creating digital solutions that drive business
-              growth.
+              Hello, my name is Rohit. I am a Backend and Frontend Developer with 4+ years of
+              experience in building scalable and efficient web applications.
             </p>
           </motion.div>
 
@@ -391,14 +391,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-lg leading-relaxed">
-                I'm a passionate freelance full-stack developer who specializes in creating beautiful, functional, and
-                user-centered digital experiences. With expertise in modern web technologies, I help businesses and
-                entrepreneurs bring their visions to life.
-              </p>
-              <p className="text-lg leading-relaxed">
-                My freelance journey started 5 years ago, and since then, I've worked with startups, small businesses,
-                and established companies to build scalable web applications that solve real-world problems and drive
-                business growth.
+                Hello, my name is Rohit Pippale. I am a passionate Full Stack Web Developer with more than 5 years of experience in building scalable, secure, and performance-driven web applications. My journey in the tech world started early with my academic background. I completed my 10th and 12th in the science stream, where I built my foundation in logical thinking, mathematics, and computer basics. Later...
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button asChild className="mt-6 group">
@@ -419,7 +412,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <StatCard number="50+" label="Projects Completed" icon={<Target className="h-6 w-6" />} delay={0.2} />
-              <StatCard number="5+" label="Years Experience" icon={<Award className="h-6 w-6" />} delay={0.4} />
+              <StatCard number="4+" label="Years Experience" icon={<Award className="h-6 w-6" />} delay={0.4} />
               <StatCard number="30+" label="Happy Clients" icon={<Users className="h-6 w-6" />} delay={0.6} />
               <StatCard number="24h" label="Response Time" icon={<Zap className="h-6 w-6" />} delay={0.8} />
             </motion.div>
@@ -436,8 +429,9 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Freelance Services Section */}
-      <section className="py-24 bg-muted/30">
+      {/* <section className="py-24 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -461,10 +455,10 @@ export default function Home() {
 
           <FreelanceServices />
         </div>
-      </section>
+      </section> */}
 
       {/* Freelance Process Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -488,7 +482,7 @@ export default function Home() {
 
           <FreelanceProcess />
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Skills Preview Section */}
       <section className="py-24 bg-muted/30">
@@ -516,17 +510,17 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
             <div>
               <h3 className="text-2xl font-bold mb-8">Core Technologies</h3>
-              <SkillProgressBar skill="React & Next.js" percentage={95} delay={0.2} />
-              <SkillProgressBar skill="TypeScript" percentage={90} delay={0.4} />
-              <SkillProgressBar skill="Node.js & Express" percentage={85} delay={0.6} />
-              <SkillProgressBar skill="UI/UX Design" percentage={88} delay={0.8} />
-              <SkillProgressBar skill="Database Design" percentage={82} delay={1.0} />
+              <SkillProgressBar skill="Laravel & php" percentage={85} delay={0.2} />
+              <SkillProgressBar skill="Database Design" percentage={75} delay={1.0} />
+              <SkillProgressBar skill="TypeScript" percentage={60} delay={0.4} />
+              <SkillProgressBar skill="UI/UX Design" percentage={50} delay={0.8} />
+              <SkillProgressBar skill="React & Next.js" percentage={40} delay={0.2} />
             </div>
 
             <div>
               <h3 className="text-2xl font-bold mb-8">Tools & Frameworks</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {["React", "Next.js", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "AWS", "Docker", "Git"].map(
+                {["Php", "Laravel", "TypeScript", "Mysql","jquery", "AWS", "Git"].map(
                   (skill, index) => (
                     <motion.div
                       key={skill}
@@ -644,7 +638,7 @@ export default function Home() {
       </section>
 
       {/* Freelance Testimonials Section */}
-      <section className="py-24 bg-muted/30">
+      {/* <section className="py-24 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -668,17 +662,17 @@ export default function Home() {
 
           <FreelanceTestimonials />
         </div>
-      </section>
+      </section> */}
 
       {/* Freelance CTA Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container max-w-7xl mx-auto px-4">
           <FreelanceCTA />
         </div>
-      </section>
+      </section> */}
 
       {/* Enhanced Contact Preview Section */}
-      <section className="py-24 bg-muted/30 relative overflow-hidden">
+      {/* <section className="py-24 bg-muted/30 relative overflow-hidden">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -741,27 +735,26 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Background Code Animation */}
         <div className="absolute inset-0 -z-10 opacity-5">
           <CodeBlock
             code={`class FreelanceDeveloper {
-  constructor() {
-    this.name = 'Rohit';
-    this.status = 'Available';
-    this.expertise = ['React', 'Next.js', 'Full-Stack'];
-    this.commitment = 'Excellence';
-  }
-  
-  startProject(requirements) {
-    return this.expertise
-      .map(skill => skill + this.commitment)
-      .reduce((result, value) => result + value, 'Amazing Results');
-  }
-}`}
+                  constructor() {
+                    this.name = 'Rohit';
+                    this.status = 'Available';
+                    this.expertise = ['React', 'Next.js', 'Full-Stack'];
+                    this.commitment = 'Excellence';
+                  }
+                  
+                  startProject(requirements) {
+                    return this.expertise
+                      .map(skill => skill + this.commitment)
+                      .reduce((result, value) => result + value, 'Amazing Results');
+                  }
+                }`}
             language="javascript"
           />
         </div>
-      </section>
+      </section> */}
     </PageTransition>
   )
 }

@@ -90,16 +90,16 @@ export default function ContactPage() {
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <Mail className="h-6 w-6 text-primary" />
-                  <span className="text-lg">your.email@example.com</span>
+                  <span className="text-lg">Rohitpippale7989@gmail.com</span>
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                   className="flex items-center gap-4 p-4 rounded-lg bg-muted/50"
                   whileHover={{ x: 10 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <Phone className="h-6 w-6 text-primary" />
                   <span className="text-lg">+1 (123) 456-7890</span>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                   className="flex items-center gap-4 p-4 rounded-lg bg-muted/50"
                   whileHover={{ x: 10 }}
@@ -112,7 +112,7 @@ export default function ContactPage() {
 
               <div className="flex gap-6 pt-4">
                 <motion.a
-                  href="#"
+                  href="https://github.com/rohitpippale" target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   whileHover={{ y: -5, scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   <span className="sr-only">GitHub</span>
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.linkedin.com/in/rohit-pippale-775b3019a/" target="_blank"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   whileHover={{ y: -5, scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   <Linkedin className="h-8 w-8" />
                   <span className="sr-only">LinkedIn</span>
                 </motion.a>
-                <motion.a
+                {/* <motion.a
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   whileHover={{ y: -5, scale: 1.2 }}
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 >
                   <Twitter className="h-8 w-8" />
                   <span className="sr-only">Twitter</span>
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
 

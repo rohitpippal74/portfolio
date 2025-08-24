@@ -8,66 +8,130 @@ import PageTransition from "@/components/page-transition"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
 
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState("all")
-
   const projects = [
     {
       id: 1,
-      title: "E-commerce Website",
-      description:
-        "A full-featured e-commerce platform built with Next.js, featuring product listings, cart functionality, and payment integration.",
-      tags: ["Next.js", "React", "Stripe", "Tailwind CSS"],
+      title: "DefineClasses.com",
+      description: "Education purpose platform",
+      tags: ["Laravel", "PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "web",
+      link: "https://defineclasses.com",
     },
     {
       id: 2,
-      title: "Task Management App",
-      description:
-        "A productivity application that helps users organize tasks, set priorities, and track progress on projects.",
-      tags: ["React", "Redux", "Firebase", "Material UI"],
+      title: "AlcaSolutions.in",
+      description: "Business solution platform",
+      tags: ["Laravel", "PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "app",
+      link: "https://alcasolutions.in",
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills, built with modern web technologies.",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      title: "BirthDeathOnline.in",
+      description: "Online portal",
+      tags: ["Laravel", "PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "web",
+      link: "https://birthdeathonline.in",
     },
     {
       id: 4,
-      title: "Weather Dashboard",
-      description: "A weather application that provides real-time weather data and forecasts for locations worldwide.",
-      tags: ["JavaScript", "API Integration", "CSS"],
+      title: "BundelkhandFarmProducts.com",
+      description: "Organic Farm Products website",
+      tags: ["PHP", "Bootstrap", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "app",
+      link: "https://bundelkhandfarmproducts.com",
     },
     {
       id: 5,
-      title: "Blog Platform",
-      description:
-        "A content management system allowing users to create, edit, and publish blog posts with rich text editing.",
-      tags: ["Next.js", "MongoDB", "Auth.js"],
+      title: "SrcInternationalSchool.co.in",
+      description: "School website",
+      tags: ["PHP", "Laravel", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "web",
+      link: "https://srcinternationalschool.co.in",
     },
     {
       id: 6,
-      title: "Social Media Dashboard",
-      description: "An analytics dashboard that tracks and visualizes social media metrics across multiple platforms.",
-      tags: ["React", "Chart.js", "API Integration"],
+      title: "HopeIndia.biz",
+      description: "Business/service website",
+      tags: ["Laravel", "PHP"],
       image: "/placeholder.svg?height=300&width=400",
-      category: "dashboard",
+      link: "https://hopeindia.biz",
+    },
+    {
+      id: 7,
+      title: "Wwec.in",
+      description: "Educational/consultancy website",
+      tags: ["Laravel", "Bootstrap"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://wwec.in",
+    },
+    {
+      id: 8,
+      title: "FlyDigitally.in",
+      description: "Digital marketing website",
+      tags: ["PHP", "Bootstrap", "MySQL"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://flydigitally.in",
+    },
+    {
+      id: 9,
+      title: "MSDigitalMarketingAgency.com",
+      description: "Marketing agency website",
+      tags: ["PHP", "Laravel", "Bootstrap"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "http://msdigitalmarketingagency.com",
+    },
+    {
+      id: 10,
+      title: "MandiOutlet.com",
+      description: "Service & Marketplace",
+      tags: ["Laravel", "PHP", "Marketplace"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://mandioutlet.com",
+    },
+    {
+      id: 11,
+      title: "TheCompellingImage.com",
+      description: "E-learning platform",
+      tags: ["Laravel", "PHP", "E-learning"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://thecompellingimage.com",
+    },
+    {
+      id: 12,
+      title: "Pluckit.com",
+      description: "Service Marketplace",
+      tags: ["Laravel", "PHP", "Marketplace"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://pluckit.com",
+    },
+    {
+      id: 13,
+      title: "MasteryMade.com",
+      description: "AI-based education platform",
+      tags: ["Next.js", "AI", "Laravel", "PHP"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://masterymade.com",
+    },
+    {
+      id: 14,
+      title: "TheWay.Masterymade.com",
+      description: "AI-based education platform",
+      tags: ["Next.js", "AI", "Laravel", "PHP"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://theway.masterymade.com",
+    },
+    {
+      id: 15,
+      title: "BnbArts.com",
+      description: "Photo purchase website",
+      tags: ["Laravel", "PHP", "MySQL"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "http://bnbarts.com",
     },
   ]
-
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
 
   return (
     <PageTransition>
@@ -96,32 +160,12 @@ export default function ProjectsPage() {
           </motion.div>
 
           <motion.div
-            className="flex justify-center mb-10 gap-4 flex-wrap"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            <FilterButton active={filter === "all"} onClick={() => setFilter("all")}>
-              All Projects
-            </FilterButton>
-            <FilterButton active={filter === "web"} onClick={() => setFilter("web")}>
-              Web
-            </FilterButton>
-            <FilterButton active={filter === "app"} onClick={() => setFilter("app")}>
-              Apps
-            </FilterButton>
-            <FilterButton active={filter === "dashboard"} onClick={() => setFilter("dashboard")}>
-              Dashboards
-            </FilterButton>
-          </motion.div>
-
-          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            {filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}
                 title={project.title}
@@ -129,6 +173,7 @@ export default function ProjectsPage() {
                 tags={project.tags}
                 image={project.image}
                 delay={0.2 * index}
+                link={project.link}
               />
             ))}
           </motion.div>
@@ -138,41 +183,20 @@ export default function ProjectsPage() {
   )
 }
 
-function FilterButton({
-  children,
-  active,
-  onClick,
-}: {
-  children: React.ReactNode
-  active: boolean
-  onClick: () => void
-}) {
-  return (
-    <motion.button
-      className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-        active ? "bg-primary text-white shadow-md" : "bg-muted/50 text-muted-foreground hover:bg-muted"
-      }`}
-      onClick={onClick}
-      whileHover={{ y: -2 }}
-      whileTap={{ y: 0 }}
-    >
-      {children}
-    </motion.button>
-  )
-}
-
 function ProjectCard({
   title,
   description,
   tags,
   image,
   delay,
+  link,
 }: {
   title: string
   description: string
   tags: string[]
   image: string
   delay: number
+  link: string
 }) {
   return (
     <motion.div
@@ -207,9 +231,11 @@ function ProjectCard({
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-              <Button className="w-full">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Demo
+              <Button className="w-full" asChild>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Demo
+                </a>
               </Button>
             </motion.div>
           </div>

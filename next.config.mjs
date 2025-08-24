@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  output: 'export', // Commented out for development
+  trailingSlash: true, // Commented out for development
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,8 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/portfolio/out',
-  assetPrefix: '/portfolio/out',
+  basePath: '/portfolio/out', // Commented out for development
+  assetPrefix: '/portfolio/out', // Commented out for development
 }
 
 export default nextConfig;
