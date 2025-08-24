@@ -10,6 +10,7 @@ export default function SkillsPage() {
     <PageTransition>
       <section className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
+          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,6 +33,7 @@ export default function SkillsPage() {
             />
           </motion.div>
 
+          {/* Skills Section */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
             <Tabs defaultValue="frontend" className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-10 h-12">
@@ -45,45 +47,44 @@ export default function SkillsPage() {
                   Tools & Others
                 </TabsTrigger>
               </TabsList>
+
+              {/* Frontend Skills */}
               <TabsContent value="frontend" className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  <SkillCard name="HTML/CSS" level="Expert" delay={0.1} />
-                  <SkillCard name="JavaScript" level="Expert" delay={0.2} />
-                  <SkillCard name="React" level="Expert" delay={0.3} />
-                  <SkillCard name="Next.js" level="Advanced" delay={0.4} />
-                  <SkillCard name="TypeScript" level="Advanced" delay={0.5} />
-                  <SkillCard name="Tailwind CSS" level="Advanced" delay={0.6} />
-                  <SkillCard name="Redux" level="Intermediate" delay={0.7} />
-                  <SkillCard name="Framer Motion" level="Intermediate" delay={0.8} />
+                  <SkillCard name="HTML" level="Expert" delay={0.1} />
+                  <SkillCard name="CSS" level="Intermediate" delay={0.2} />
+                  <SkillCard name="JavaScript" level="Expert" delay={0.3} />
+                  <SkillCard name="jquery" level="Expert" delay={0.3} />
+                  <SkillCard name="ajax" level="Expert" delay={0.3} />
+                  <SkillCard name="React.js" level="Beginner" delay={0.4} />
+                  <SkillCard name="Next.js" level="Beginner" delay={0.5} />
+                  <SkillCard name="TypeScript" level="Intermediate" delay={0.6} />
+                  <SkillCard name="Redux" level="Intermediate" delay={0.8} />
                 </div>
               </TabsContent>
+
+              {/* Backend Skills */}
               <TabsContent value="backend" className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  <SkillCard name="Node.js" level="Advanced" delay={0.1} />
-                  <SkillCard name="Express" level="Advanced" delay={0.2} />
-                  <SkillCard name="MongoDB" level="Intermediate" delay={0.3} />
-                  <SkillCard name="PostgreSQL" level="Intermediate" delay={0.4} />
-                  <SkillCard name="Firebase" level="Advanced" delay={0.5} />
+                  <SkillCard name="Laravel" level="Expert" delay={0.4} />
+                  <SkillCard name="php" level="Expert" delay={0.4} />
                   <SkillCard name="REST API" level="Expert" delay={0.6} />
-                  <SkillCard name="GraphQL" level="Intermediate" delay={0.7} />
-                  <SkillCard name="Prisma" level="Intermediate" delay={0.8} />
                 </div>
               </TabsContent>
+
+              {/* Tools & Others */}
               <TabsContent value="tools" className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  <SkillCard name="Git" level="Expert" delay={0.1} />
-                  <SkillCard name="GitHub" level="Expert" delay={0.2} />
+                  <SkillCard name="Git" level="Intermediate" delay={0.1} />
+                  <SkillCard name="GitHub" level="Intermediate" delay={0.2} />
                   <SkillCard name="VS Code" level="Expert" delay={0.3} />
-                  <SkillCard name="Figma" level="Intermediate" delay={0.4} />
-                  <SkillCard name="Docker" level="Intermediate" delay={0.5} />
-                  <SkillCard name="Jest" level="Intermediate" delay={0.6} />
-                  <SkillCard name="CI/CD" level="Intermediate" delay={0.7} />
                   <SkillCard name="AWS" level="Beginner" delay={0.8} />
                 </div>
               </TabsContent>
             </Tabs>
           </motion.div>
 
+          {/* Expertise Section */}
           <motion.div
             className="mt-20"
             initial={{ opacity: 0, y: 50 }}
@@ -93,19 +94,24 @@ export default function SkillsPage() {
             <h2 className="text-3xl font-bold mb-10 text-center">My Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ExpertiseCard
-                title="Frontend Development"
-                description="Building responsive, accessible, and performant user interfaces with modern frameworks and tools."
+                title="React & Next.js Mastery"
+                description="Deep expertise in building scalable and high-performance web applications using React and Next.js."
                 delay={0.8}
               />
               <ExpertiseCard
-                title="UI/UX Design"
-                description="Creating intuitive and visually appealing user experiences with a focus on usability and aesthetics."
+                title="Full-Stack Development"
+                description="Designing and developing complete solutions from frontend to backend with modern frameworks."
                 delay={0.9}
               />
               <ExpertiseCard
-                title="Performance Optimization"
-                description="Optimizing web applications for speed, efficiency, and better user experience."
+                title="UI/UX Design"
+                description="Creating intuitive, accessible, and visually appealing user experiences with a focus on usability."
                 delay={1.0}
+              />
+              <ExpertiseCard
+                title="Performance Optimization"
+                description="Optimizing applications for speed, efficiency, SEO, and smooth user experience."
+                delay={1.1}
               />
             </div>
           </motion.div>
@@ -115,6 +121,7 @@ export default function SkillsPage() {
   )
 }
 
+/* Skill Card */
 function SkillCard({ name, level, delay }: { name: string; level: string; delay: number }) {
   const getLevelColor = (level: string) => {
     switch (level) {
@@ -148,6 +155,7 @@ function SkillCard({ name, level, delay }: { name: string; level: string; delay:
   )
 }
 
+/* Expertise Card */
 function ExpertiseCard({ title, description, delay }: { title: string; description: string; delay: number }) {
   return (
     <motion.div

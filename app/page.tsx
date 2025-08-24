@@ -23,6 +23,7 @@ import {
   MessageCircle,
   Calendar,
   Briefcase,
+  FileText,
 } from "lucide-react"
 import Link from "next/link"
 import { motion, useScroll, useTransform } from "framer-motion"
@@ -83,9 +84,9 @@ export default function Home() {
   return (
     <PageTransition>
       {/* Freelance Availability Banner */}
-      <div className="container max-w-7xl mx-auto px-4 pt-4">
+      {/* <div className="container max-w-7xl mx-auto px-4 pt-4">
         <FreelanceAvailabilityBanner />
-      </div>
+      </div> */}
 
       {/* Enhanced Hero Banner Section */}
       <section
@@ -170,7 +171,7 @@ export default function Home() {
                   }}
                   transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  Your Name
+                  Rohit
                 </motion.span>
               </motion.h1>
 
@@ -180,7 +181,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                <TypingAnimation text="Freelance Developer & Digital Solutions Expert" delay={1000} />
+                <TypingAnimation text="Full Stack Web Developer | Laravel & PHP Specialist" delay={100} />
               </motion.div>
 
               {/* Freelance Status Badge */}
@@ -191,12 +192,7 @@ export default function Home() {
                 transition={{ delay: 1.5 }}
               >
                 <Badge className="bg-green-100 text-green-800 px-6 py-2 text-lg border border-green-200">
-                  <motion.div
-                    className="w-2 h-2 bg-green-500 rounded-full mr-2"
-                    animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
-                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                  />
-                  Available for New Projects
+                  Laravel Developer | Eloquent ORM & MySQL Optimization Specialist
                 </Badge>
               </motion.div>
 
@@ -207,7 +203,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2 }}
               >
-                <TypingAnimation text="const freelancer = { available: true, quality: 'premium' };" delay={2000} />
+                <TypingAnimation text="const NewProject = { role: 'Laravel', tech: ['Laravel', 'PHP'] };" delay={20} />
               </motion.div>
             </motion.div>
 
@@ -216,32 +212,24 @@ export default function Home() {
               className="text-xl md:text-2xl text-muted-foreground max-w-[900px] mx-auto leading-relaxed"
               variants={item}
             >
-              I help businesses and entrepreneurs bring their digital visions to life through expert freelance
-              development services, cutting-edge technology, and exceptional client experience.
+              Specialize in building secure and scalable web applications with Laravel, PHP, and modern technologies, backed by 5 years of experience.
             </motion.p>
 
             {/* Enhanced Buttons with Freelance Focus */}
             <motion.div className="flex flex-col sm:flex-row gap-6 justify-center" variants={item}>
               <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="text-lg px-10 py-6 rounded-full shadow-lg group" asChild>
-                  <Link href="/contact">
-                    <MessageCircle className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                    Start Your Project
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
                 <Button variant="outline" size="lg" className="text-lg px-10 py-6 rounded-full shadow-lg group">
                   <Calendar className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                  Schedule Call
+                  Contact Me
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" size="lg" className="text-lg px-10 py-6 rounded-full shadow-lg group">
-                  <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-                  Download CV
-                </Button>
+                <Link href="/cv">
+                  <Button variant="outline" size="lg" className="text-lg px-10 py-6 rounded-full shadow-lg group">
+                    <FileText className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                    View CV
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 
@@ -352,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* Freelance Stats Section */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -368,7 +356,7 @@ export default function Home() {
           </motion.div>
           <FreelanceStats />
         </div>
-      </section>
+      </section>  */}
 
       {/* Enhanced About Preview Section */}
       <section className="py-24 relative overflow-hidden">
@@ -758,7 +746,7 @@ export default function Home() {
           <CodeBlock
             code={`class FreelanceDeveloper {
   constructor() {
-    this.name = 'Your Name';
+    this.name = 'Rohit';
     this.status = 'Available';
     this.expertise = ['React', 'Next.js', 'Full-Stack'];
     this.commitment = 'Excellence';

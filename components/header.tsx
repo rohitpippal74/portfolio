@@ -40,7 +40,7 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4">
         <motion.div className="font-bold text-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Link href="/">Your Name</Link>
+          <Link href="/">Rohit Pippale</Link>
         </motion.div>
 
         {/* Desktop Navigation */}

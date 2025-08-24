@@ -13,8 +13,8 @@ export default function Footer() {
       viewport={{ once: true }}
     >
       <div className="container max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-muted-foreground">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-        <div className="flex gap-8 mt-4 md:mt-0">
+        <p className="text-muted-foreground">© {new Date().getFullYear()} Rohit Pippale. All rights reserved.</p>
+        {/* <div className="flex gap-8 mt-4 md:mt-0">
           <motion.div whileHover={{ y: -2 }}>
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
@@ -25,7 +25,7 @@ export default function Footer() {
               Terms of Service
             </Link>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </motion.footer>
   )

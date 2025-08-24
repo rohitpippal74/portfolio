@@ -54,14 +54,14 @@ export function FreelanceAvailabilityBanner() {
 
 export function FreelanceStats() {
   const stats = [
-    { number: "50+", label: "Projects Completed", icon: <Target className="h-5 w-5" /> },
-    { number: "30+", label: "Happy Clients", icon: <Users className="h-5 w-5" /> },
+    { number: "15+", label: "Projects Completed", icon: <Target className="h-5 w-5" /> },
+    { number: "13+", label: "Happy Clients", icon: <Users className="h-5 w-5" /> },
     { number: "5+", label: "Years Experience", icon: <Calendar className="h-5 w-5" /> },
-    { number: "24h", label: "Average Response", icon: <Clock className="h-5 w-5" /> },
+    // { number: "24h", label: "Average Response", icon: <Clock className="h-5 w-5" /> },
   ]
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
       {stats.map((stat, index) => (
         <motion.div
           key={stat.label}
