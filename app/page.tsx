@@ -44,6 +44,7 @@ import {
   FreelanceCTA,
 } from "@/components/freelance-components"
 import { useRef } from "react"
+import { ProjectCard } from "./projects/components/ProjectCard"
 
 export default function Home() {
   const ref = useRef(null)
@@ -79,6 +80,33 @@ export default function Home() {
     "while(coding) { quality++; }",
     "import { excellence } from 'work';",
     "export default ProfessionalService;",
+  ]
+
+  const projects = [
+    {
+      id: 1,
+      title: "MasteryMade.com",
+      description: "AI-based education platform",
+      tags: ["Next.js", "Laravel",'Mysql', "PHP","Bootstrap","jquery"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://masterymade.com",
+    },
+    {
+      id: 2,
+      title: "TheWay.Masterymade.com",
+      description: "Influencer Ai Platform",
+      tags: ["Python",'Tailwind',"Mysql","Next js"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://theway.masterymade.com",
+    },
+    {
+      id: 3,
+      title: "TheCompellingImage.com",
+      description: "E-Learning Platform for Photographers",
+      tags: ["Laravel", "PHP", "Mysql","jquery","Bootstrap"],
+      image: "/placeholder.svg?height=300&width=400",
+      link: "https://thecompellingimage.com",
+    },
   ]
 
   return (
@@ -377,7 +405,7 @@ export default function Home() {
               viewport={{ once: true }}
             />
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hello, my name is Rohit. I am a Backend and Frontend Developer with 4+ years of
+              Hello, my name is Rohit. I am a Backend and Frontend Developer with 5+ years of
               experience in building scalable and efficient web applications.
             </p>
           </motion.div>
@@ -411,10 +439,10 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <StatCard number="50+" label="Projects Completed" icon={<Target className="h-6 w-6" />} delay={0.2} />
-              <StatCard number="4+" label="Years Experience" icon={<Award className="h-6 w-6" />} delay={0.4} />
-              <StatCard number="30+" label="Happy Clients" icon={<Users className="h-6 w-6" />} delay={0.6} />
-              <StatCard number="24h" label="Response Time" icon={<Zap className="h-6 w-6" />} delay={0.8} />
+              <StatCard number="15+" label="Projects Completed" icon={<Target className="h-6 w-6" />} delay={0.2} />
+              <StatCard number="5+" label="Years Experience" icon={<Award className="h-6 w-6" />} delay={0.4} />
+              <StatCard number="13+" label="Happy Clients" icon={<Users className="h-6 w-6" />} delay={0.6} />
+              {/* <StatCard number="24h" label="Response Time" icon={<Zap className="h-6 w-6" />} delay={0.8} /> */}
             </motion.div>
 
             <motion.div
@@ -510,7 +538,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
             <div>
               <h3 className="text-2xl font-bold mb-8">Core Technologies</h3>
-              <SkillProgressBar skill="Laravel & php" percentage={85} delay={0.2} />
+              <SkillProgressBar skill="Laravel & php" percentage={93} delay={0.2} />
               <SkillProgressBar skill="Database Design" percentage={75} delay={1.0} />
               <SkillProgressBar skill="TypeScript" percentage={60} delay={0.4} />
               <SkillProgressBar skill="UI/UX Design" percentage={50} delay={0.8} />
@@ -564,67 +592,54 @@ export default function Home() {
       </section>
 
       {/* Enhanced Featured Projects Section */}
-      <section className="py-24">
+      <section className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Featured Projects</h2>
+            <motion.h1
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              My Projects
+            </motion.h1>
             <motion.div
-              className="w-24 h-1 bg-primary mx-auto mb-8"
+              className="w-20 h-1 bg-primary mx-auto"
               initial={{ width: 0 }}
-              whileInView={{ width: 96 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              viewport={{ once: true }}
+              animate={{ width: 80 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
             />
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Recent freelance projects that showcase my expertise and client satisfaction.
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <ProjectPreviewCard
-              title="E-commerce Platform"
-              description="A full-featured online store with payment integration, admin dashboard, and real-time analytics for a growing retail business."
-              image="/placeholder.svg?height=300&width=400"
-              tags={["Next.js", "Stripe", "MongoDB", "Tailwind"]}
-              github="https://github.com"
-              demo="https://demo.com"
-              client="RetailCorp"
-              delay={0.2}
-            />
-            <ProjectPreviewCard
-              title="SaaS Dashboard"
-              description="Collaborative project management tool with real-time updates, team collaboration, and advanced analytics for productivity."
-              image="/placeholder.svg?height=300&width=400"
-              tags={["React", "Firebase", "Material-UI", "Socket.io"]}
-              github="https://github.com"
-              demo="https://demo.com"
-              client="TechStart"
-              delay={0.4}
-            />
-            <ProjectPreviewCard
-              title="Corporate Website"
-              description="Modern, responsive corporate website with CMS integration, SEO optimization, and performance enhancements."
-              image="/placeholder.svg?height=300&width=400"
-              tags={["Next.js", "Framer Motion", "Tailwind", "Sanity"]}
-              github="https://github.com"
-              demo="https://demo.com"
-              client="BusinessCorp"
-              delay={0.6}
-            />
-          </div>
-
           <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                image={project.image}
+                delay={0.2 * index}
+                link={project.link}
+              />
+            ))}
+          </motion.div>
+          
+          <motion.div
             className="text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
           >
             <Button asChild size="lg" className="group">
               <Link href="/projects">
@@ -798,7 +813,7 @@ function ProjectPreviewCard({
   description: string
   image: string
   tags: string[]
-  github: string
+  github?: string
   demo: string
   client: string
   delay: number
@@ -819,14 +834,16 @@ function ProjectPreviewCard({
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-            <motion.a
-              href={github}
-              className="p-2 bg-white rounded-full text-black hover:bg-gray-200 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Github className="h-5 w-5" />
-            </motion.a>
+            {github && (
+               <motion.a
+               href={github}
+               className="p-2 bg-white rounded-full text-black hover:bg-gray-200 transition-colors"
+               whileHover={{ scale: 1.1 }}
+               whileTap={{ scale: 0.9 }}
+             >
+               <Github className="h-5 w-5" />
+             </motion.a>
+            )}
             <motion.a
               href={demo}
               className="p-2 bg-white rounded-full text-black hover:bg-gray-200 transition-colors"

@@ -2,68 +2,65 @@
 
 import type React from "react"
 
-import { Github, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
 import PageTransition from "@/components/page-transition"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { ProjectCard } from "./components/ProjectCard"
 
 export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "DefineClasses.com",
-      description: "Education purpose platform",
-      tags: ["Laravel", "PHP", "MySQL"],
+      title: "MasteryMade.com",
+      description: "AI-based education platform",
+      tags: ["Next.js", "Laravel",'Mysql', "PHP","Bootstrap","jquery"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://defineclasses.com",
+      link: "https://masterymade.com",
     },
     {
       id: 2,
-      title: "AlcaSolutions.in",
-      description: "Business solution platform",
-      tags: ["Laravel", "PHP", "MySQL"],
+      title: "TheWay.Masterymade.com",
+      description: "Influencer Ai Platform",
+      tags: ["Python",'Tailwind',"Mysql","Next js"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://alcasolutions.in",
+      link: "https://theway.masterymade.com",
     },
     {
       id: 3,
-      title: "BirthDeathOnline.in",
-      description: "Online portal",
-      tags: ["Laravel", "PHP", "MySQL"],
+      title: "TheCompellingImage.com",
+      description: "E-Learning Platform for Photographers",
+      tags: ["Laravel", "PHP", "Mysql","jquery","Bootstrap"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://birthdeathonline.in",
+      link: "https://thecompellingimage.com",
     },
     {
       id: 4,
-      title: "BundelkhandFarmProducts.com",
-      description: "Organic Farm Products website",
-      tags: ["PHP", "Bootstrap", "MySQL"],
+      title: "HopeIndia.biz",
+      description: "Business/service website",
+      tags: ["PHP","Bootstrap",'Mysql'],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://bundelkhandfarmproducts.com",
+      link: "https://hopeindia.biz",
     },
     {
       id: 5,
-      title: "SrcInternationalSchool.co.in",
-      description: "School website",
-      tags: ["PHP", "Laravel", "MySQL"],
+      title: "Pluckit.com",
+      description: "Service Marketplace",
+      tags: ["Laravel", "PHP", "jquery","bootstrap","Mysql"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://srcinternationalschool.co.in",
+      link: "https://pluckit.com",
     },
     {
       id: 6,
-      title: "HopeIndia.biz",
-      description: "Business/service website",
-      tags: ["Laravel", "PHP"],
+      title: "BirthDeathOnline.in",
+      description: "Online portal",
+      tags: ["PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://hopeindia.biz",
+      link: "https://birthdeathonline.in",
     },
     {
       id: 7,
       title: "Wwec.in",
       description: "Educational/consultancy website",
-      tags: ["Laravel", "Bootstrap"],
+      tags: ["PHP", "Bootstrap","Mysql"],
       image: "/placeholder.svg?height=300&width=400",
       link: "https://wwec.in",
     },
@@ -79,7 +76,7 @@ export default function ProjectsPage() {
       id: 9,
       title: "MSDigitalMarketingAgency.com",
       description: "Marketing agency website",
-      tags: ["PHP", "Laravel", "Bootstrap"],
+      tags: ["PHP", "Bootstrap"],
       image: "/placeholder.svg?height=300&width=400",
       link: "http://msdigitalmarketingagency.com",
     },
@@ -93,41 +90,41 @@ export default function ProjectsPage() {
     },
     {
       id: 11,
-      title: "TheCompellingImage.com",
-      description: "E-learning platform",
-      tags: ["Laravel", "PHP", "E-learning"],
+      title: "BundelkhandFarmProducts.com",
+      description: "Organic Farm Products website",
+      tags: ["PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://thecompellingimage.com",
+      link: "https://bundelkhandfarmproducts.com",
     },
     {
       id: 12,
-      title: "Pluckit.com",
-      description: "Service Marketplace",
-      tags: ["Laravel", "PHP", "Marketplace"],
+      title: "SrcInternationalSchool.co.in",
+      description: "School website",
+      tags: ["PHP","MySQL",'Bootstrap'],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://pluckit.com",
+      link: "https://srcinternationalschool.co.in",
     },
     {
       id: 13,
-      title: "MasteryMade.com",
-      description: "AI-based education platform",
-      tags: ["Next.js", "AI", "Laravel", "PHP"],
+      title: "DefineClasses.com",
+      description: "Education purpose platform",
+      tags: ["PHP", "MySQL","Mysql"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://masterymade.com",
+      link: "https://defineclasses.com",
     },
     {
       id: 14,
-      title: "TheWay.Masterymade.com",
-      description: "AI-based education platform",
-      tags: ["Next.js", "AI", "Laravel", "PHP"],
+      title: "AlcaSolutions.in",
+      description: "Business solution platform",
+      tags: ["PHP", "MySQL"],
       image: "/placeholder.svg?height=300&width=400",
-      link: "https://theway.masterymade.com",
+      link: "https://alcasolutions.in",
     },
     {
       id: 15,
       title: "BnbArts.com",
       description: "Photo purchase website",
-      tags: ["Laravel", "PHP", "MySQL"],
+      tags: ["Laravel", "PHP", "MySQL","jquery","Bootstrap"],
       image: "/placeholder.svg?height=300&width=400",
       link: "http://bnbarts.com",
     },
@@ -183,64 +180,4 @@ export default function ProjectsPage() {
   )
 }
 
-function ProjectCard({
-  title,
-  description,
-  tags,
-  image,
-  delay,
-  link,
-}: {
-  title: string
-  description: string
-  tags: string[]
-  image: string
-  delay: number
-  link: string
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay }}
-      whileHover={{ y: -10 }}
-    >
-      <Card className="overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 h-full">
-        <motion.div
-          className="relative h-56 w-full overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          <img src={image || "/placeholder.svg"} alt={title} className="object-cover w-full h-full" />
-        </motion.div>
-        <CardContent className="p-6 flex-1 flex flex-col">
-          <h3 className="text-xl font-bold mb-3">{title}</h3>
-          <p className="text-muted-foreground text-sm flex-1 leading-relaxed mb-4">{description}</p>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-          <div className="flex gap-3 mt-auto">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-              <Button variant="outline" className="w-full">
-                <Github className="h-4 w-4 mr-2" />
-                Code
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-              <Button className="w-full" asChild>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Demo
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-        </CardContent>
-      </Card>
-    </motion.div>
-  )
-}
+

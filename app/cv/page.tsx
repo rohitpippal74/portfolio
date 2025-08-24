@@ -44,7 +44,7 @@ const cvData = {
     areaOfInterest: "Web Development",
   },
   about:
-    "🚀 **4+ Years Experienced** Full Stack Web Developer specializing in advanced Laravel development and modern web technologies. Expert in developing complex web applications with sophisticated authentication systems, RESTful APIs, and cutting-edge AI integrations. Proven track record of solving complex logical challenges and delivering high-quality, scalable solutions that drive business growth. Passionate about creating efficient, user-friendly applications with exceptional performance and user experience.",
+    "🚀 **5+ Years Experienced** Full Stack Web Developer specializing in advanced Laravel development and modern web technologies. Expert in developing complex web applications with sophisticated authentication systems, RESTful APIs, and cutting-edge AI integrations. Proven track record of solving complex logical challenges and delivering high-quality, scalable solutions that drive business growth. Passionate about creating efficient, user-friendly applications with exceptional performance and user experience.",
   experience: [
     {
       title: "Full Stack Web Developer",
@@ -205,7 +205,7 @@ export default function CVPage() {
                 className="bg-black text-white hover:bg-gray-800 flex items-center gap-2"
                 size="sm"
               >
-                <a href="/cv/cv.pdf" download="Rohit_CV.pdf">
+                <a href="/portfolio/out/cv/cv.pdf" download="Rohit_CV.pdf">
                   <Download className="h-4 w-4" />
                   PDF
                 </a>
@@ -215,7 +215,7 @@ export default function CVPage() {
                 className="bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2"
                 size="sm"
               >
-                <a href="/cv/cv.docx" download="Rohit_CV.docx">
+                <a href="/portfolio/out/cv/cv.docx" download="Rohit_CV.docx">
                   <FileText className="h-4 w-4" />
                   DOCX
                 </a>

@@ -59,7 +59,7 @@ export default function SkillsPage() {
                   <SkillCard name="React.js" level="Beginner" delay={0.4} />
                   <SkillCard name="Next.js" level="Beginner" delay={0.5} />
                   <SkillCard name="TypeScript" level="Intermediate" delay={0.6} />
-                  <SkillCard name="Redux" level="Intermediate" delay={0.8} />
+                  <SkillCard name="Redux" level="Beginner" delay={0.8} />
                 </div>
               </TabsContent>
 
